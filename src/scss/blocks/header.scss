@@ -5,11 +5,8 @@
   top: 0;
   z-index: 5;
 
-  box-sizing: border-box;
-
   color: $main-color;
   font-size: $main-size;
-  font-family: $main-font;
 
   background: #fff;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.05);
@@ -96,24 +93,42 @@
   }
 
   &__menu {
+    margin: $zero-padding;
+    padding-left: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: $zero-padding;
-    padding-left: 0;
 
     &-item {
+      position: relative;
       @include link_reset;
 
-      margin-right: 0.75rem;
       padding: 1em;
 
       line-height: 1.2rem;
 
-      &:hover {
-        text-decoration: underline;
+      &:not(:last-child) {
+        margin-right: 0.75rem;
+      }
 
-        background: rgba(0, 15, 64, 0.12);
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $main-color;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+          opacity: 1;
+          transition: all ease-in-out 0.5s;
+        }
       }
     }
   }

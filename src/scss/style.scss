@@ -1,11 +1,6 @@
 @import '~normalize.css';
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
+@import 'settings.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'typography.scss';
