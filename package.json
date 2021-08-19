@@ -44,7 +44,7 @@
     "postcss": "^7.0.36",
     "postcss-loader": "^4.0.1",
     "postcss-preset-env": "^6.7.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-cli": "^1.0.0-alpha6",
     "pug-loader": "^2.4.0",
     "sass-loader": "^8.0.2",
